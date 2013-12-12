@@ -1,0 +1,50 @@
+<!-- START OF SmartSource Data Collector TAG v10.4.12 -->
+<!-- Copyright (c) 2013 Webtrends Inc.  All rights reserved. -->
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="/scripts/webtrends.min.js"></script>
+<script>
+function fireDcsMT() {
+
+  var args;
+  args = {
+    args: {
+      "DCSext.tce_it": "factors[1]",
+      "DCSext.tce_ia": "factors[0]",
+      "DCSext.tce_iw": "this.countFactors(factors)",
+      "DCSext.tce_fs": "this.countFactors(factors) * factors[0]",
+      "DCSext.tce_wa": "this.stringifyFactors(factors)",
+      "DCSext.tls_qr": "factors[6]",
+      "DCSext.uem_evt": "uem_evt",
+      "DCSext.uem_ele": "uem_ele"
+    }
+  };
+  alert(JSON.stringify(args));
+  Webtrends.multiTrack(args);
+}
+
+function fireDcsMT2() {
+
+  var args;
+  args = {
+    args: {
+      "DCSext.tce_it2": "factors[1]2",
+      "DCSext.tce_ia2": "factors[0]2",
+      "DCSext.tce_iw2": "this.countFactors(factors)2",
+      "DCSext.tce_fs2": "this.countFactors(factors) * factors[0]2",
+      "DCSext.tce_wa2": "this.stringifyFactors(factors)2",
+      "DCSext.tls_qr2": "factors[6]2",
+      "DCSext.uem_evt2": "uem_evt2",
+      "DCSext.uem_ele2": "uem_ele2"
+    }
+  };
+  alert(JSON.stringify(args));
+  Webtrends.multiTrack(args);
+}
+</script>
+
+<button onclick="fireDcsMT()">Click</button>
+
+<button onclick="fireDcsMT2()">Click 2</button>
+
+
+
