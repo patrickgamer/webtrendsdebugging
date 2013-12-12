@@ -15,22 +15,22 @@
       onsitedoms: "example.com exampledealer.com",
       fpcdom: ".example.com"
     });
-    dcs.track();
     dcs.DCSext.tce_wa = 'tce_wa';
     dcs.DCSext.tce_iw = 'tce_iw';
     dcs.DCSext.tce_fs = 'tce_fs';
+    dcs.track();
     send = function(dcs) {
       return function() {
         var args;
         args = {
           args: {
-            "DCSext.tce_it": 1,
-            "DCSext.tce_ia": 0,
-            "DCSext.tce_iw": 0,
-            "DCSext.tce_fs": 0,
-            "DCSext.tce_wa": 0,
-            "DCSext.tls_qr": 0,
-            "DCSext.uem_evt": 0,
+            "DCSext.tce_it": "DCSext.tce_it",
+            "DCSext.tce_ia": "DCSext.tce_ia",
+            "DCSext.tce_iw": "DCSext.tce_iw",
+            "DCSext.tce_fs": "DCSext.tce_fs",
+            "DCSext.tce_wa": "DCSext.tce_wa",
+            "DCSext.tls_qr": "DCSext.tls_qr",
+            "DCSext.uem_evt": "DCSext.uem_evt",
             "DCSext.uem_ele": "DCSext.uem_ele__value"
           }
         };
